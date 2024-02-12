@@ -1,0 +1,31 @@
+print("Asphalt Calculation Specially For Highways".center(60))
+print()
+print("Developed By Hamza Javed".center(60))
+print()
+l=float(input("Enter Lenght Of The Road in Meter : "))
+b=float(input("Enter Breath Of The Road in Meter : "))
+t=float(input("Enter Thickness Of The Road in Meter: "))
+print()
+Density=float(input("Enter Density Of The Asphalt : "))   #Density of Asphalt in kg/cu.m
+Vol=l*b*t
+print()
+print("Volume is : ",Vol,"meter cube")
+print()
+Weight_of_Asphalt=Vol*Density         #Density=Mass/Volume
+print("Weight of Asphalt is : ",Weight_of_Asphalt ,"kg")
+print("Weight of Asphalt is : ",Weight_of_Asphalt/1000,"Ton")
+print()
+print("Calculation For How many Dumpers Required & Its Cost".center(60))
+print()
+Q=float(input("How Much Ton One Dumper Contain : "))
+K=float(input("Enter How Many KM Required to Reach the Destination : "))
+P=float(input("Enter Price Of Petrol For 1 KM : "))
+print()
+total=K*P
+print("The Cost OF Each Dumper is around : ",total.__round__(1),"PKR")
+print()
+Contain=((Weight_of_Asphalt/1000)/Q.__round__(1))
+print("Truck We Required : ",Contain)
+print()
+F=total*Contain
+print("Total Cost For All Truck : ",F.__round__(1),"PKR")
